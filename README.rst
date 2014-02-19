@@ -2,7 +2,7 @@
 ansible-profile
 ===============
 
-An Ansible profile for timing tasks.
+An Ansible plugin for timing tasks.
 
 
 Usage
