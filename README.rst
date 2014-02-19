@@ -8,7 +8,7 @@ An Ansible plugin for timing tasks.
 Usage
 ^^^^^
 
-Make a directory called `callback_plugins` and put `profile_tasks.py` inside of it.
+Make a directory called `callback_plugins` next to your playbook and put `profile_tasks.py` inside of it.
 
 .. code-block:: bash
 
