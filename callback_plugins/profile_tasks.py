@@ -14,7 +14,7 @@ class CallbackModule(object):
         Logs the start of each task
         """
         if self.current is not None:
-            # Record the running time of the last executed task¬ 
+            # Record the running time of the last executed task 
             self.stats[self.current] = time.time() - self.stats[self.current]
 
         # Record the start time of the current task
