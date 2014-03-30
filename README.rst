@@ -14,7 +14,7 @@ Make a directory called `callback_plugins` next to your playbook and put `profil
 
     mkdir callback_plugins
     cd callback_plugins
-    wget https://github.com/jlafon/ansible-profile/raw/master/callback_plugins/profile_tasks.py
+    wget https://raw.githubusercontent.com/jlafon/ansible-profile/master/callback_plugins/profile_tasks.py
 
 Now, run your playbook just as you normally would!
 
