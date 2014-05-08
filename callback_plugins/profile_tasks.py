@@ -14,7 +14,7 @@ class CallbackModule(object):
         Logs the start of each task
         """
         if self.current is not None:
-            # Record the running time of the last executed task 
+            # Record the running time of the last executed task
             self.stats[self.current] = time.time() - self.stats[self.current]
 
         # Record the start time of the current task
@@ -30,11 +30,20 @@ class CallbackModule(object):
             self.stats[self.current] = time.time() - self.stats[self.current]
 
         # Sort the tasks by their running time
-        results = sorted(self.stats.items(), key=lambda value: value[1], reverse=True)
+        results = sorted(
+            self.stats.items(),
+            key=lambda value: value[1],
+            reverse=True,
+        )
 
         # Just keep the top 10
         results = results[:10]
 
         # Print the timings
         for name, elapsed in results:
-            print "{0:-<70}{1:->9}".format('{0} '.format(name), ' {0:.02f}s'.format(elapsed))
+            print(
+                "{0:-<70}{1:->9}".format(
+                    '{0} '.format(name),
+                    ' {0:.02f}s'.format(elapsed),
+                )
+            )
