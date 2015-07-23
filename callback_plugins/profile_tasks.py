@@ -1,4 +1,5 @@
 import time
+import datetime
 
 
 class CallbackModule(object):
@@ -47,3 +48,11 @@ class CallbackModule(object):
                     ' {0:.02f}s'.format(elapsed),
                 )
             )
+
+        total_seconds = sum([x[1] for x in self.stats.items()])
+        print("\nPlaybook finished: {0}, {1} total tasks.  {2} elapsed. \n".format(
+                time.asctime(),
+                len(self.stats.items()),
+                datetime.timedelta(seconds=(int(total_seconds)))
+                )
+          )
