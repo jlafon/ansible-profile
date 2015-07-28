@@ -32,3 +32,7 @@ Now, run your playbook just as you normally would!
    serf | Install system dependencies-----------------------------------------3.38s
    duo_security | Install Duo Unix SSH Integration----------------------------3.37s
    loggly | Install TLS version-----------------------------------------------3.36s
+
+If for some reason you want to disable this temporarily, set the
+environment variable `ANSIBLE_PROFILE_DISABLE` to any value (even an
+empty string).

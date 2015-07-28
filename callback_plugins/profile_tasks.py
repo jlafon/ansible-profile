@@ -1,5 +1,6 @@
-import time
 import datetime
+import os
+import time
 
 
 class CallbackModule(object):
@@ -14,6 +15,10 @@ class CallbackModule(object):
         """
         Logs the start of each task
         """
+
+        if os.getenv("ANSIBLE_PROFILE_DISABLE") is not None:
+            return
+
         if self.current is not None:
             # Record the running time of the last executed task
             self.stats[self.current] = time.time() - self.stats[self.current]
@@ -26,6 +31,10 @@ class CallbackModule(object):
         """
         Prints the timings
         """
+
+        if os.getenv("ANSIBLE_PROFILE_DISABLE") is not None:
+            return
+
         # Record the timing of the very last task
         if self.current is not None:
             self.stats[self.current] = time.time() - self.stats[self.current]
