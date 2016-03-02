@@ -5,8 +5,17 @@ ansible-profile
 An Ansible plugin for timing tasks.
 
 
-Usage
-^^^^^
+Usage in Ansible 2.0
+^^^^^^^^^^^^^^^^^^^^
+
+This plugin is included in Ansible 2.0, and can be enabled by adding this line to `ansible.cfg`
+
+.. code-block:: bash
+
+    callback_whitelist = profile_tasks
+
+Usage in Ansible 1.x
+^^^^^^^^^^^^^^^^^^^^
 
 Make a directory called `callback_plugins` next to your playbook and put `profile_tasks.py` inside of it.
 
